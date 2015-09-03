@@ -1,24 +1,32 @@
-<div id="pageInfo">
-	<table>
-		<tbody>
-			<tr>
-				<td>Name</td>
-				<td data-bind="text:name"></td>
-			</tr>
-			<tr>
-				<td>Products</td>
-				<td>
-					<!-- ko foreach: products -->
-						<span data-bind="text:$data"></span>
-						<br />
-					<!-- /ko -->
-				</td>				
-			</tr>
-			<tr>
-				<td>Application ID</td>
-				<td data-bind="text:applicationId"></td>
-			</tr>
-		</tbody>
-	</table>	
-	<button data-bind="click:showInstructions">Next</button>
+<div id="pageInfo" data-enhance="false">
+	<header>
+		<h1>Information</h1>
+	</header>
+	<section class="content">
+		<table>
+			<tbody>
+				<tr>
+					<td>Name</td>
+					<td data-bind="text:name"></td>
+				</tr>
+				<tr>
+					<td>Products</td>
+					<td>
+						<!-- ko foreach: products -->
+							<span data-bind="text:$data"></span>
+							<br />
+						<!-- /ko -->
+					</td>				
+				</tr>
+				<tr>
+					<td>Application ID</td>
+					<td data-bind="text:applicationId"></td>
+				</tr>
+			</tbody>
+		</table>	
+		<button data-bind="click:showInstructions">Next</button>
+	</section>
+	<footer>
+		&copyright; 2015
+	</footer>
 </div>

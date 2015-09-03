@@ -24,6 +24,7 @@ require( ["jquery"],function($){
 		$.mobile.ajaxEnabled = false;
       	$.mobile.autoInitializePage = false;
       	$.mobile.loadingMessage = false;
+        $.mobile.ignoreContentEnabled = true;
   	});
 
   	require( ["knockout", "app","knockout-amd-helpers","jqm"],function(ko, app){

@@ -1,5 +1,8 @@
 define(['jquery'], function($){
 	var self = this;
+		pagePin = "pin",
+		pageInformation = "info",
+		pageInstruction = "instructions";
 	self.validatePin = function(pin, callback){
 		var data = {
 			pin: pin
@@ -7,7 +10,8 @@ define(['jquery'], function($){
 		$.ajax({
 		  type: "POST",
 		  url: '/pin',
-		  data: JSON.parse(pin),
+		  data: data,
+		  dataType: 'json',
 		  success: function(){
 		  	callback.apply(null, arguments)
 		  },
@@ -16,11 +20,19 @@ define(['jquery'], function($){
 		  }
 		});
 	};
+	self.removePage = function(ele) {
+		$(ele).on('pagehide', function () {
+		    $(this).remove();
+		});
+	}
 	self.showClientInfo = function() {
-		$.mobile.changePage("#info");
+		/*if($('#'+pagePin).length){
+			self.removePage($('#'+pagePin));
+		}*/
+		$.mobile.changePage("#"+pageInformation);
 	};
 	self.showInstructions = function() {
-		$.mobile.changePage("#instructions");
+		$.mobile.changePage("#"+pageInstruction);
 	};
 	return self;
 	

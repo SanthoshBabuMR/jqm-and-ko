@@ -1,9 +1,18 @@
-<div id="pagePin" >
-	<form>
-		<label for="ePin">Enter 4 digit PIN</label>
-		<br>
-		<input type="text" data-bind="value:pin" value="" id="ePin" name="ePin" maxlength=4/>
-		<br>
-		<button data-bind="click:validatePin">Validate Pin</button>
-	</form>
+<div id="pagePin" data-enhance="false">
+	<header>
+		<h1>Information</h1>
+	</header>
+	<section class="content">
+		<form>
+			<label for="ePin">Enter 4 digit PIN</label>
+			<br>
+			<input type="text" data-bind="value:pin" value="" id="ePin" name="ePin" maxlength=4/>
+			<br>
+			<button data-bind="click:validatePin">Validate Pin</button>
+		</form>
+	</section>
+	<footer>
+		&copyright; 2015
+	</footer>
+
 </div>
